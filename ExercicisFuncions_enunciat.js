@@ -56,6 +56,7 @@ for (let i = 0; i < dies.length; i++) {
 
 //Mostra els dies que ténen més de 7 caracters (filter)
 console.log("----------------------------------");
+
 let diesMayorQue7Filter = dies.filter((x) => x.length > 7);
 console.log(diesMayorQue7Filter);
 
@@ -63,8 +64,7 @@ console.log("----------------------------------");
 /* Ara volem fer el mateix, però que ens torne un String amb els dies que ténen més de 7 caracters */
 /* reduce */
 let diesMayorQue7Reduce = dies.reduce((acc, dia) => {
-    acc = 0;
     if (dia.length > 7) acc += 1;
     return acc;
-});
+}, 0);
 console.log(diesMayorQue7Reduce);
