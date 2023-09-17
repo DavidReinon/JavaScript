@@ -53,6 +53,7 @@ calcularCaracters(dies);
 for (let i = 0; i < dies.length; i++) {
     console.log(`${dies[i]} : ${numCaracters[i]}`);
 }
+//Correción: .forEach((element, index) Conta con index para saber la posición del elemento en el array
 
 //Mostra els dies que ténen més de 7 caracters (filter)
 console.log("----------------------------------");
