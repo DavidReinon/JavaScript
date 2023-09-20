@@ -96,8 +96,14 @@ const users = [
         website: "dd.net",
         password: "Dean_hashed_password",
     },
-][
-    //Que torne un array d'objectes amb l'email, el tel i la web
+];
+//Que torne un array d'objectes amb l'email, el tel i la web
+
+let selectedInfoUsers = users.map((user) => {
+    return { email: user.email, tel: user.website, phone: user.phone };
+});
+console.log(selectedInfoUsers);
+/* [
     ({
         email: "Daphne43@yahoo.com",
         website: "carmela.net",
@@ -107,11 +113,10 @@ const users = [
         email: "deno@google.com",
         website: "dd.net",
         phone: "1-123-543-1857 123212",
-    })
-];
-
+    }),
+]; */
 //-----------------------------------------------------
-//A partir d'un arrar de comandes com el proporcionat
+//A partir d'un array de comandes com el proporcionat
 let comandes = [
     {
         client: {
@@ -166,8 +171,13 @@ let comandes = [
 
 // tornar un array anomenat llistat de comandes, on cada element siga un array d'objectes on
 // aparega només el client i el producte de la seua comanda.
+let llistatDeComandes = comandes.map((comanda) => {
+    return comanda.productes.map((producte) => {
+        return { client: comanda.client.nom, productes: producte.nom };
+    });
+});
+console.log(llistatDeComandes);
 // Exemple:
-
 //llistatDeComandes => [
 //    [
 //        { client: 'Manel Viel', productes: 'Taronges' },
