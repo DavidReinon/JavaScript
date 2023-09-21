@@ -186,7 +186,10 @@ const esWebsiteBuit = (usuari) => {
 esWebsiteBuit(dadesUsuaris[0]);
 //Crear una funció tornaId(usuari) que donat un usuari em torne un objecte id
 console.log("-----------------");
-
+const tornaId = (usuari) => {
+    return { id: usuari.id };
+};
+console.log(tornaId(dadesUsuaris[0]));
 //Creeu una funció (POSEU-LI vosaltres un nom descriptiu) que amb un reduce/filter, torne un array amb els id d'aquelles empreses que no tenen website
 //[{ id: 2 }, { id: 5 }]
 console.log("-----------------");
