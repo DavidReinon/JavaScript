@@ -167,6 +167,15 @@ console.log(llistat_Id_Nom_Email_reduce());
 //Crea una funció llistaIds_EmpresesSenseWebsite() que torne un array amb els id d'aquelles empreses que no tenen website
 //[ { id: 2 }, { id: 5 } ]
 console.log("-----------------");
+const llistaIds_EmpresesSenseWebsite = () => {
+    let dadesUsuarisV3 = dadesUsuaris
+        .filter((usuari) => !usuari.website)
+        .map((usuari) => ({
+            id: usuari.id,
+        }));
+    return dadesUsuarisV3;
+};
+console.log(llistaIds_EmpresesSenseWebsite());
 //Crear una funció esWebsiteBuit(usuari) que donat un objecte usuari, em diga si la website esta buida o no
 
 //Crear una funció tornaId(usuari) que donat un usuari em torne un objecte id
