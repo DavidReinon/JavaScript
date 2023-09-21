@@ -177,10 +177,16 @@ const llistaIds_EmpresesSenseWebsite = () => {
 };
 console.log(llistaIds_EmpresesSenseWebsite());
 //Crear una funció esWebsiteBuit(usuari) que donat un objecte usuari, em diga si la website esta buida o no
-
-//Crear una funció tornaId(usuari) que donat un usuari em torne un objecte id
-
 console.log("-----------------");
+const esWebsiteBuit = (usuari) => {
+    if (usuari.website)
+        return console.log(`El usuario te website: ${usuari.website}`);
+    return console.log(`El usuari no te website.`);
+};
+esWebsiteBuit(dadesUsuaris[0]);
+//Crear una funció tornaId(usuari) que donat un usuari em torne un objecte id
+console.log("-----------------");
+
 //Creeu una funció (POSEU-LI vosaltres un nom descriptiu) que amb un reduce/filter, torne un array amb els id d'aquelles empreses que no tenen website
 //[{ id: 2 }, { id: 5 }]
 console.log("-----------------");
